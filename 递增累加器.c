@@ -19,6 +19,7 @@ int main()
 		}
 		else
 		{
+			printf("The format is not correct.\n");
 			break;
 		}
 	}
