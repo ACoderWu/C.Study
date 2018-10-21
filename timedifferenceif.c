@@ -7,9 +7,9 @@ int main()
 	int m1 = 0;
 	int m2 = 0;
 	
-	printf("Please input the first time (Separated by Spaces between hours and minutes):\n");
+	printf("TPlease input the first time (Separated by Spaces between hours and minutes):\n");
 	scanf("%d %d",&h1,&m1);
-	printf("Please input the twice time (Separated by Spaces between hours and minutes):\n");
+	printf("TPlease input the twice time (Separated by Spaces between hours and minutes):\n");
 	scanf("%d %d",&h2,&m2);
 	
 	int h = h2-h1;
