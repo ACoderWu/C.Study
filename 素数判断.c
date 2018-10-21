@@ -25,7 +25,7 @@ int main()
 	{
 		printf("%d是素数\n",x); 
 	}
-	else 
+	else
 	{
 		printf("%d不是素数\n",x);
 	} 
