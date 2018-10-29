@@ -33,3 +33,15 @@ int main()
 	return 0;
 }
 
+int prime( int x )
+{
+	_Bool ret = 1;
+    if ( x = 1 || ( x % 2 == 0 && x != 2 ) )
+    {
+        ret = 0;
+    }
+    for( int i = 2; i < x;)
+    {
+        ret = 0;
+    }
+}
