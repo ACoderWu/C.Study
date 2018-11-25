@@ -3,12 +3,11 @@
 #include <math.h>
 
 /*
-ÕâÊÇÒ»¸ö²ÂÊýÐ¡ÓÎÏ·£¬ÏÈ¹¹½¨ÁËÒ»¸öËØÊý±í£¬ÊäÈëÒ»¸öÊý£¬»á½«Õâ¸öÊýÒÔÄÚµÄËØÊý»ò×î³õµÄ
-100¸öËØÊý·Å½øÒ»¸öÊý×éÀï£¬È»ºóÉú³ÉÒ»¸öËæ»úÊý£¬ÊäÈëÒ»¸öËØÊý²Â£¬È¡³öËæ»úÊý¶ÔÓ¦Î»ÖÃ
-µÄËØÊý×÷¶Ô±È£¬²ÂÖÐÁËµ±È»»áÓÐ½±Àø£¬Ã»²ÂÖÐ»á¸æËßÄãÕýÈ·µÄ´ð°¸£¬²»¹Ü²ÂµÄ½á¹ûÈçºÎ£¬×î
-ÖÕ¶¼»á½«Õâ¸öËØÊýµÄÎ»ÖÃ¸æËßÄã¡£
+ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½Ï·ï¿½ï¿½ï¿½È¹ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½á½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+100ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¬È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦Î»ï¿½ï¿½
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½È»ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½Ä´ð°¸£ï¿½ï¿½ï¿½ï¿½Ü²ÂµÄ½ï¿½ï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½?
+ï¿½Õ¶ï¿½ï¿½á½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½?
 */
-
 
 int search(int key, int a[], int length);
 int isPrime(int x);
@@ -19,84 +18,82 @@ int main()
     int number = 0;
 
     printf("please input a big number round\n");
-    scanf( "%d", &number );
+    scanf("%d", &number);
 
     int x = 0;
-	int i = 0;
-	int j = 0;
+    int i = 0;
+    int j = 0;
     int loc = -1;
 
-	for (i = 0; i<(number+1) && j<100; i++)
-	{
-		if ( isPrime(i) )
-		{
-			prime[j++] = i;
-			printf("%d\t", i);
-			if ( (j)%10 == 0 )
+    for (i = 0; i < (number + 1) && j < 100; i++)
+    {
+        if (isPrime(i))
+        {
+            prime[j++] = i;
+            printf("%d\t", i);
+            if ((j) % 10 == 0)
             {
                 printf("\n");
-			}
-		}
-	}
+            }
+        }
+    }
 
     printf("\nplease input a number\n");
     scanf("%d", &x);
 
     int q;
-    int w = q%100;
+    int w = q % 100;
 
     if (prime[w] == x)
-        {
-            printf("yes, the number your guess is right!\n");
-                    }
-        else
-        {
-            printf("no, it's wrong your  guess!\nthe NO.%d true number is %d\n",w,prime[w]);
-        }
-
-    loc = search(x, prime, sizeof(prime)/sizeof(prime[0]));
-
-    if(loc != -1 )
     {
-        printf("%d in the NO.%d of the prime chart\n",x,loc+1);
+        printf("yes, the number your guess is right!\n");
     }
     else
     {
-        printf("%d is not in prime\n",x);
+        printf("no, it's wrong your  guess!\nthe NO.%d true number is %d\n", w, prime[w]);
+    }
+
+    loc = search(x, prime, sizeof(prime) / sizeof(prime[0]));
+
+    if (loc != -1)
+    {
+        printf("%d in the NO.%d of the prime chart\n", x, loc + 1);
+    }
+    else
+    {
+        printf("%d is not in prime\n", x);
     }
 
     return 0;
 }
 
-
 int isPrime(int x)
 {
-	int ret = 1;
-	int i = 0;
-	if ( x == 1 || (x%2 == 0 && x != 2))
-	{
-		ret = 0;
-	}
-	for ( i = 3; i < (x/2)/*sqrt(x)*/; i += 2 )
-	{
-		if( x%i == 0 )
-		{
-			ret = 0;
-			break;
-		}
-	}
+    int ret = 1;
+    int i = 0;
+    if (x == 1 || (x % 2 == 0 && x != 2))
+    {
+        ret = 0;
+    }
+    for (i = 3; i < (x / 2) /*sqrt(x)*/; i += 2)
+    {
+        if (x % i == 0)
+        {
+            ret = 0;
+            break;
+        }
+    }
 
-	return ret;
-
+    return ret;
 }
 
 int search(int key, int a[], int length)
 {
     int ret = -1;
     int i = 0;
-    for( i = 0; i < length; i++ )
+    for (i = 0; i < length; i++)
     {
-        if( key == a[i] )
+        if (key == a[i])
         {
             ret = i;
             break;
